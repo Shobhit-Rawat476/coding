@@ -1,6 +1,6 @@
-<div class="my-3">
-    <h6 >{{dateToday | date:'short'}}</h6>
-    <h5 [ngClass]="{'strike': !todo.active}"><br>{{todo.title}}</h5>
+<div class="my-3" id="text" >
+    <h6 >{{dateToday | date}}</h6>
+    <h5 [ngClass]="{'strike': !todo.active}"><br>{{todo.title|uppercase }}</h5>
     <p [ngClass]="{'strike': !todo.active}">{{todo.desc}}</p>
     <div class="form-group form-check">
         <input type="checkbox" class="form-check-input" id="todo{{i}}" (click)="onCheckboxClick(todo)" [checked]="!todo.active">
